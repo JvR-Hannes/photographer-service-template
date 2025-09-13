@@ -9,13 +9,6 @@ header {
     font-family: "Gruppo", sans-serif;
     margin: 0;
     padding: 0 0.5em;
-    background: #5433FF;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
 }
 
 .nav-bar {
@@ -27,8 +20,7 @@ header {
 .company-info {
     text-align: left;
     margin: 0 0.5em;
-    color: #000046;
-    text-shadow: 2px 2px 1px #1CB5E0;
+    text-shadow: 0 0 1px #000046;
     font-weight: 600;
 }
 
@@ -46,20 +38,101 @@ header {
 .nav-links {
     display: flex;
     gap: 1em;
-    padding: 1em 0;
+    padding: 1em 1em;
     font-size: 1.1rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #000046;
     font-weight: 600;
-    text-shadow: 2px 2px 1px #1CB5E0;
+    text-shadow: 0 0 2px #000046;
 }
 
 /* Body / Sections Styling */
 
 section {
-    padding: 0 1em;
+    padding: 2em 1em;
     margin: 0;
+}
+
+.services-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    background-color: #414345;
+    align-items: center;
+}
+
+.photographer-description {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.services-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    padding: 1em ;
+    font-size: 1.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 0.5em;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.pricing-section {
+    background-color: #414345;
+    color: white;
+    text-align: center;
+}
+
+.price-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.label {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: white;
+    color: #414345;
+    border-radius: 8px;
+    padding: 0.5em;
+}
+
+.price-description {
+    font-size: 0.9rem;
+    width: 95%;
+}
+
+@media (min-width: 600px) {
+    .services-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .price-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
